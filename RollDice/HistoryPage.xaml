@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="RollDice.HistoryPage">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+			<ListView x:Name="list">
+				<ListView.ItemTemplate>
+					<DataTemplate>
+						<ViewCell>
+							<StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+								<Label Text="{Binding Time, StringFormat='{0:H:mm:ss}'}" YAlign="Center" HorizontalOptions="StartAndExpand" />
+								<Image Source="{Binding Dice1.DiceImg}" Aspect="AspectFit" HeightRequest="30" />
+								<Image Source="{Binding Dice2.DiceImg}" Aspect="AspectFit" HeightRequest="30" />
+								<Image Source="{Binding Dice3.DiceImg}" Aspect="AspectFit" HeightRequest="30" />
+								<Image Source="{Binding Dice4.DiceImg}" Aspect="AspectFit" HeightRequest="30" />
+								<Image Source="{Binding Dice5.DiceImg}" Aspect="AspectFit" HeightRequest="30" />
+								<Image Source="{Binding Dice6.DiceImg}" Aspect="AspectFit" HeightRequest="30" />
+							</StackLayout>
+						</ViewCell>
+					</DataTemplate>
+				</ListView.ItemTemplate>
+			</ListView>
+			<Button Text="Clear" FontSize="24" Clicked="clear_clicked" HorizontalOptions="CenterAndExpand" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

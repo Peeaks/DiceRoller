@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:RollDice" x:Class="RollDice.RollDicePage">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem Name="History" Clicked="history_clicked" />
+	</ContentPage.ToolbarItems>
+	<StackLayout HorizontalOptions="FillAndExpand">
+		<StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Start" HeightRequest="50">
+			<Image x:Name="dice_1_img" Aspect="AspectFit" />
+			<Image x:Name="dice_2_img" Aspect="AspectFit" />
+			<Image x:Name="dice_3_img" Aspect="AspectFit" />
+			<Image x:Name="dice_4_img" Aspect="AspectFit" />
+			<Image x:Name="dice_5_img" Aspect="AspectFit" />
+			<Image x:Name="dice_6_img" Aspect="AspectFit" />
+		</StackLayout>
+		<Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+		<StackLayout Orientation="Horizontal" Spacing="0">
+			<Button Text="Roll" FontSize="24" Clicked="roll_clicked" HorizontalOptions="CenterAndExpand" />
+			<Picker x:Name="dice_amount">
+				<Picker.Items>
+					<x:String>1</x:String>
+					<x:String>2</x:String>
+					<x:String>3</x:String>
+					<x:String>4</x:String>
+					<x:String>5</x:String>
+					<x:String>6</x:String>
+				</Picker.Items>
+				<Picker.SelectedIndex>1</Picker.SelectedIndex>
+			</Picker>
+		</StackLayout>
+	</StackLayout>
+</ContentPage>
